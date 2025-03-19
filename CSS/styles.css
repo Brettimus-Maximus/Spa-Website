@@ -1,0 +1,23 @@
+├── css/
+│   └── styles.css
+└── index.html
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #f5f5f5;
+    padding: 80px 0;
+}
+
+/* About Image Placeholder (replace later) */
+.about-image-placeholder {
+    border-radius: 8px;
+}
+
+/* Add your custom styles here */

@@ -1,1 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment | Your Spa Name</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Your Spa Name</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="booking.html">Book Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Page Header -->
+    <header class="bg-light py-5">
+        <div class="container">
+            <h1 class="text-center">Book an Appointment</h1>
+            <p class="lead text-center">Schedule your relaxation experience with us</p>
+        </div>
+    </header>
+
+    <!-- Booking Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h2>Online Booking</h2>
+                    <p>Fill out the form below to request an appointment. We'll contact you to confirm your booking.</p>
+                    
+                    <form id="bookingForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="service" class="form-label">Service</label>
+                            <select class="form-select" id="service" required>
+                                <option value="" selected disabled>Select a service</option>
+                                <option value="swedish">Swedish Massage (60 min)</option>
+                                <option value="deep">Deep Tissue Massage (60 min)</option>
+                                <option value="hot">Hot Stone Massage (75 min)</option>
+                                <option value="classic">Classic Facial (60 min)</option>
+                                <option value="antiaging">Anti-Aging Facial (75 min)</option>
+                                <option value="hydrating">Hydrating Facial (60 min)</option>
+                                <option value="salt">Salt Scrub (45 min)</option>
+                                <option value="detox">Detox Wrap (60 min)</option>
+                                <option value="aroma">Aromatherapy Body Treatment (75 min)</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Preferred Date</label>
+                            <input type="date" class="form-control" id="date" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="time" class="form-label">Preferred Time</label>
+                            <select class="form-select" id="time" required>
+                                <option value="" selected disabled>Select a time</option>
+                                <option value="9:00">9:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                                <option value="19:00">7:00 PM</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="notes" class="form-label">Special Requests or Notes</label>
+                            <textarea class="form-control" id="notes" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Request Appointment</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <h2>Booking Information</h2>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">How It Works</h3>
+                            <ol>
+                                <li>Fill out the booking request form</li>
+                                <li>We'll contact you within 24 hours to confirm your appointment</li>
+                                <li>A 50% deposit is required for appointments over $100</li>
+                                <li>Arrive 15 minutes before your appointment time</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">Cancellation Policy</h3>
+                            <p>We understand that schedules change. We kindly request at least 24 hours notice for cancellations. Cancellations with less than 24 hours notice may be subject to a cancellation fee.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Need Help?</h3>
+                            <p>If you prefer to book by phone or have questions about our services, please call us at (555) 123-4567 during business hours.</p>
+                            <a href="contact.html" class="btn btn-outline-primary">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Options -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Payment Options</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <p>We accept various payment methods for your convenience:</p>
+                    <div class="payment-icons d-flex justify-content-center gap-4 my-4">
+                        <div>Visa</div>
+                        <div>Mastercard</div>
+                        <div>PayPal</div>
+                        <div>Cash</div>
+                    </div>
+                    <p class="mb-0">Secure payments are processed at the time of service or when confirming your booking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Your Spa Name</h4>
+                    <p>123 Relaxation Street<br>Wellness City, WC 12345</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Hours</h4>
+                    <p>Monday - Friday: 9am - 8pm<br>
+                    Saturday: 10am - 6pm<br>
+                    Sunday: 11am - 5pm</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contact</h4>
+                    <p>Phone: (555) 123-4567<br>
+                    Email: info@yourspa.com</p>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2025 Your Spa Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Basic form handling -->
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for your booking request! We will contact you shortly to confirm your appointment.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

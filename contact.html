@@ -1,1 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Your Spa Name</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .contact-info-box {
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            margin-bottom: 20px;
+        }
+        .contact-icon {
+            font-size: 2rem;
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+        .map-container {
+            height: 300px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .map-placeholder {
+            background-color: #e9ecef;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: #6c757d;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #212529;
+        }
+        .form-control:focus {
+            border-color: #6c757d;
+            box-shadow: 0 0 0 0.25rem rgba(108, 117, 125, 0.25);
+        }
+        .btn-primary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+        .btn-primary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Your Spa Name</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.html">Book Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Page Header -->
+    <header class="bg-light py-5">
+        <div class="container">
+            <h1 class="text-center">Contact Us</h1>
+            <p class="lead text-center">We'd love to hear from you and help you schedule your relaxation journey</p>
+        </div>
+    </header>
+    
+    <!-- Contact Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="col-lg-6 mb-4">
+                    <h2>Send Us a Message</h2>
+                    <p>Have questions or ready to book? Fill out the form below and we'll get back to you as soon as possible.</p>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="contactName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="contactName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="contactEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactPhone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="contactPhone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactSubject" class="form-label">Subject</label>
+                            <select class="form-select" id="contactSubject">
+                                <option selected>Select a subject</option>
+                                <option value="booking">Booking Inquiry</option>
+                                <option value="service">Service Information</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactMessage" class="form-label">Your Message</label>
+                            <textarea class="form-control" id="contactMessage" rows="5" required></textarea>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="newsletter">
+                            <label class="form-check-label" for="newsletter">Subscribe to our newsletter for special offers</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="col-lg-6">
+                    <h2>Contact Information</h2>
+                    <p>Visit us or reach out through any of these channels:</p>
+                    
+                    <div class="contact-info-box">
+                        <div class="text-center">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                        </div>
+                        <h4>Our Location</h4>
+                        <p>123 Relaxation Avenue<br>Serenity City, SC 12345</p>
+                    </div>
+                    
+                    <div class="contact-info-box">
+                        <div class="text-center">
+                            <i class="fas fa-clock contact-icon"></i>
+                        </div>
+                        <h4>Opening Hours</h4>
+                        <p>Monday - Friday: 9:00 AM - 8:00 PM<br>
+                        Saturday: 10:00 AM - 6:00 PM<br>
+                        Sunday: 10:00 AM - 4:00 PM</p>
+                    </div>
+                    
+                    <div class="contact-info-box">
+                        <div class="text-center">
+                            <i class="fas fa-phone-alt contact-icon"></i>
+                        </div>
+                        <h4>Phone & Email</h4>
+                        <p>Phone: (555) 123-4567<br>
+                        Email: info@yourspaname.com</p>
+                    </div>
+                    
+                    <div class="social-icons text-center">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                    
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <div class="text-center">
+                                <i class="fas fa-map contact-icon"></i>
+                                <p>Map of our location would display here</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="accordion" id="faqAccordion1">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    How do I book an appointment?
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion1">
+                                <div class="accordion-body">
+                                    You can book an appointment through our online booking system, by calling us directly, or by filling out the contact form on this page.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    What's your cancellation policy?
+                                </button>
+                            </h3>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion1">
+                                <div class="accordion-body">
+                                    We require a 24-hour notice for cancellations. Cancellations made less than 24 hours before your appointment may be subject to a cancellation fee.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="accordion" id="faqAccordion2">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    Do you offer gift certificates?
+                                </button>
+                            </h3>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion2">
+                                <div class="accordion-body">
+                                    Yes, we offer gift certificates for all our services. They can be purchased online or in person at our spa.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                    What should I bring to my appointment?
+                                </button>
+                            </h3>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion2">
+                                <div class="accordion-body">
+                                    Just yourself! We provide robes, slippers, and all necessary amenities. We recommend arriving 15 minutes early to complete any paperwork and begin your relaxation journey.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Your Spa Name</h5>
+                    <p>Providing relaxation and wellness since 2010</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html" class="text-light">Services</a></li>
+                        <li><a href="booking.html" class="text-light">Book Now</a></li>
+                        <li><a href="about.html" class="text-light">About Us</a></li>
+                        <li><a href="contact.html" class="text-light">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Newsletter</h5>
+                    <p>Subscribe for special offers</p>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Email">
+                            <button class="btn btn-outline-light" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="small m-0">&copy; 2025 Your Spa Name. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Form validation
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Simple form validation
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const message = document.getElementById('contactMessage').value;
+            
+            if (name && email && message) {
+                // In a real application, you would send this data to a server
+                alert('Thank you for your message. We will get back to you soon!');
+                this.reset();
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+    </script>
+</body>
+</html>
